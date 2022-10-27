@@ -40,21 +40,39 @@ function highestCount(arrayNumeros) {
   return contagem;
 }
 
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// // Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+//   if (cat1 mais proximo) {
+//     return `cat1`;
+//   } else if (cat2 mais proximo) {
+//     return `cat2`;
+//   } else {
+//     return `os gatos trombam e o rato foge`;
+//   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(arrayNumeros) {
+  const arrayDeStrings = []
+  for (const numero in arrayNumeros) {
+    if (arrayNumeros[numero] % 3 == 0 && arrayNumeros[numero] % 5 == 0) {
+      arrayDeStrings.push('fizzBuzz')
+    } else if (arrayNumeros[numero] % 3 == 0 && arrayNumeros[numero] % 5 != 0) {
+      arrayDeStrings.push('fizz')
+    } else if (arrayNumeros[numero] % 3 != 0 && arrayNumeros[numero] % 5 != 0) {
+      arrayDeStrings.push('bug!')
+    } else if (arrayNumeros[numero] % 3 != 0 && arrayNumeros[numero] % 5 == 0) {
+      arrayDeStrings.push('buzz')
+    }
+  }
+  return arrayDeStrings
+}  
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
 }
-function decode() {
+function decode(stringMista) {
   // seu código aqui
 }
 
