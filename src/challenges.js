@@ -19,13 +19,25 @@ function concatName(arrayDeStrings) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumeros) {
+  let maiorNumero = arrayNumeros[0];
+  for (const numero in arrayNumeros) {
+    if (arrayNumeros[numero] > maiorNumero) {
+      maiorNumero = arrayNumeros[numero];
+    }
+  }
+  let contagem = 0;
+  for (const contador in arrayNumeros) {
+    if (arrayNumeros[contador] === maiorNumero) {
+      contagem += 1;
+    }
+  }
+  return contagem;
 }
 
 // Desafio 7
