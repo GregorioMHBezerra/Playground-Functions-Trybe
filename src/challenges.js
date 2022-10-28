@@ -140,7 +140,6 @@ function techList(arrayTec, name) {
   }
   return arrayObjeto;
 }
-console.log(techList(['HTML', 'CSS', 'JavaScript', 'React', 'Jest'], 'Lucas'));
 
 module.exports = {
   calcArea,
