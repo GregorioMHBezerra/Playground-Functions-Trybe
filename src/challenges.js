@@ -58,44 +58,44 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
-  const arrayDeStrings = []
+  const arrayDeStrings = [];
   for (const numero in arrayNumeros) {
-    if (arrayNumeros[numero] % 3 == 0 && arrayNumeros[numero] % 5 == 0) {
+    if (arrayNumeros[numero] % 3 === 0 && arrayNumeros[numero] % 5 === 0) {
       arrayDeStrings.push('fizzBuzz');
-    } else if (arrayNumeros[numero] % 3 == 0 && arrayNumeros[numero] % 5 != 0) {
+    } else if (arrayNumeros[numero] % 3 === 0 && arrayNumeros[numero] % 5 !== 0) {
       arrayDeStrings.push('fizz');
-    } else if (arrayNumeros[numero] % 3 != 0 && arrayNumeros[numero] % 5 != 0) {
+    } else if (arrayNumeros[numero] % 3 !== 0 && arrayNumeros[numero] % 5 !== 0) {
       arrayDeStrings.push('bug!');
-    } else if (arrayNumeros[numero] % 3 != 0 && arrayNumeros[numero] % 5 == 0) {
+    } else if (arrayNumeros[numero] % 3 !== 0 && arrayNumeros[numero] % 5 === 0) {
       arrayDeStrings.push('buzz');
     }
   }
-  return arrayDeStrings
+  return arrayDeStrings;
 }
 
 // Desafio 9
 function encode(string) {
   let stringCodificada = [];
-  for (let index = 0; index < string.length; index++) {
+  for (let index = 0; index < string.length; index += 1) {
     switch (string[index]) {
-      case 'a':
-        stringCodificada.push('1');
-        break;
-      case 'e':
-        stringCodificada.push('2');
-        break;
-      case 'i':
-        stringCodificada.push('3');
-        break;
-      case 'o':
-        stringCodificada.push('4');
-        break;
-      case 'u':
-        stringCodificada.push('5');
-        break;
-      default:
-        stringCodificada.push(string[index]);
-        break;
+    case 'a':
+      stringCodificada.push('1');
+      break;
+    case 'e':
+      stringCodificada.push('2');
+      break;
+    case 'i':
+      stringCodificada.push('3');
+      break;
+    case 'o':
+      stringCodificada.push('4');
+      break;
+    case 'u':
+      stringCodificada.push('5');
+      break;
+    default:
+      stringCodificada.push(string[index]);
+      break;
     }
   }
   return stringCodificada.join('');
@@ -103,26 +103,26 @@ function encode(string) {
 
 function decode(stringMista) {
   let stringDecodificada = [];
-  for (let index = 0; index < stringMista.length; index++) {
+  for (let index = 0; index < stringMista.length; index += 1) {
     switch (stringMista[index]) {
-      case '1':
-        stringDecodificada.push('a');
-        break;
-      case '2':
-        stringDecodificada.push('e');
-        break;
-      case '3':
-        stringDecodificada.push('i');
-        break;
-      case '4':
-        stringDecodificada.push('o');
-        break;
-      case '5':
-        stringDecodificada.push('u');
-        break;
-      default:
-        stringDecodificada.push(stringMista[index]);
-        break;
+    case '1':
+      stringDecodificada.push('a');
+      break;
+    case '2':
+      stringDecodificada.push('e');
+      break;
+    case '3':
+      stringDecodificada.push('i');
+      break;
+    case '4':
+      stringDecodificada.push('o');
+      break;
+    case '5':
+      stringDecodificada.push('u');
+      break;
+    default:
+      stringDecodificada.push(stringMista[index]);
+      break;
     }
   }
   return stringDecodificada.join('');
