@@ -26,21 +26,17 @@ function generatePhoneNumber(arrayDeNumeros) {
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA >= (lineB + lineC) || lineB >= (lineA + lineC) || lineC >= (lineB + lineA) || lineA < Math.abs(lineB - lineC) || lineB < Math.abs(lineA - lineC) || lineC < Math.abs(lineB - lineA)) {
     return false
-  } else {
-    return true
   }
+    return true
 }
 
 // Desafio 13
 function hydrate(string) {
   const soNumeros = (string.replace(/[^0-9]/g, '')).split('');
-  let soma = 0;
-  for (const key in soNumeros) {
-    soma += parseInt(soNumeros[key]);
-  }
-  
-  return (soma === 1) ? `${soma} copo de água` : `${soma} copos de água`;
+  let soma = soNumeros.reduce((a, b) => parseInt(a, 10) + parseInt(b, 10));
+  return (soma === '1') ? `${soma} copo de água` : `${soma} copos de água`;
 }
+console.log(hydrate('5 copos, 1 copos'));
 
 module.exports = {
   generatePhoneNumber,

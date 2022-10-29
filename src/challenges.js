@@ -61,13 +61,13 @@ function fizzBuzz(arrayNumeros) {
   const arrayDeStrings = []
   for (const numero in arrayNumeros) {
     if (arrayNumeros[numero] % 3 == 0 && arrayNumeros[numero] % 5 == 0) {
-      arrayDeStrings.push('fizzBuzz')
+      arrayDeStrings.push('fizzBuzz');
     } else if (arrayNumeros[numero] % 3 == 0 && arrayNumeros[numero] % 5 != 0) {
-      arrayDeStrings.push('fizz')
+      arrayDeStrings.push('fizz');
     } else if (arrayNumeros[numero] % 3 != 0 && arrayNumeros[numero] % 5 != 0) {
-      arrayDeStrings.push('bug!')
+      arrayDeStrings.push('bug!');
     } else if (arrayNumeros[numero] % 3 != 0 && arrayNumeros[numero] % 5 == 0) {
-      arrayDeStrings.push('buzz')
+      arrayDeStrings.push('buzz');
     }
   }
   return arrayDeStrings
@@ -79,26 +79,26 @@ function encode(string) {
   for (let index = 0; index < string.length; index++) {
     switch (string[index]) {
       case 'a':
-        stringCodificada.push('1')
+        stringCodificada.push('1');
         break;
       case 'e':
-        stringCodificada.push('2')
-        break
+        stringCodificada.push('2');
+        break;
       case 'i':
-        stringCodificada.push('3')
-        break
+        stringCodificada.push('3');
+        break;
       case 'o':
-        stringCodificada.push('4')
-        break
+        stringCodificada.push('4');
+        break;
       case 'u':
-        stringCodificada.push('5')
-        break
+        stringCodificada.push('5');
+        break;
       default:
-        stringCodificada.push(string[index])
+        stringCodificada.push(string[index]);
         break;
     }
   }
-  return stringCodificada.join('')
+  return stringCodificada.join('');
 }
 
 function decode(stringMista) {
@@ -106,22 +106,22 @@ function decode(stringMista) {
   for (let index = 0; index < stringMista.length; index++) {
     switch (stringMista[index]) {
       case '1':
-        stringDecodificada.push('a')
+        stringDecodificada.push('a');
         break;
       case '2':
-        stringDecodificada.push('e')
-        break
+        stringDecodificada.push('e');
+        break;
       case '3':
-        stringDecodificada.push('i')
-        break
+        stringDecodificada.push('i');
+        break;
       case '4':
-        stringDecodificada.push('o')
-        break
+        stringDecodificada.push('o');
+        break;
       case '5':
-        stringDecodificada.push('u')
-        break
+        stringDecodificada.push('u');
+        break;
       default:
-        stringDecodificada.push(stringMista[index])
+        stringDecodificada.push(stringMista[index]);
         break;
     }
   }
