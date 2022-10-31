@@ -60,14 +60,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNumeros) {
   const arrayDeStrings = [];
   for (const numero in arrayNumeros) {
-    if (arrayNumeros[numero] % 3 === 0 && arrayNumeros[numero] % 5 === 0) {
+    if (arrayNumeros[numero] % 15 === 0) {
       arrayDeStrings.push('fizzBuzz');
-    } else if (arrayNumeros[numero] % 3 === 0 && arrayNumeros[numero] % 5 !== 0) {
+    } else if (arrayNumeros[numero] % 3 === 0) {
       arrayDeStrings.push('fizz');
-    } else if (arrayNumeros[numero] % 3 !== 0 && arrayNumeros[numero] % 5 !== 0) {
-      arrayDeStrings.push('bug!');
-    } else if (arrayNumeros[numero] % 3 !== 0 && arrayNumeros[numero] % 5 === 0) {
+    } else if (arrayNumeros[numero] % 5 === 0) {
       arrayDeStrings.push('buzz');
+    } else {
+      arrayDeStrings.push('bug!');
     }
   }
   return arrayDeStrings;

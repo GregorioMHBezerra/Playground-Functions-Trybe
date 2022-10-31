@@ -24,7 +24,7 @@ function generatePhoneNumber(arrayDeNumeros) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA >= (lineB + lineC) || lineB >= (lineA + lineC) || lineC >= (lineB + lineA) || lineA < Math.abs(lineB - lineC) || lineB < Math.abs(lineA - lineC) || lineC < Math.abs(lineB - lineA)) {
+  if (lineA >= (lineB + lineC) || lineB >= (lineA + lineC) || lineC >= (lineB + lineA)) {
     return false;
   }
   return true;
@@ -36,7 +36,6 @@ function hydrate(string) {
   let soma = soNumeros.reduce((a, b) => parseInt(a, 10) + parseInt(b, 10));
   return (soma === '1') ? `${soma} copo de água` : `${soma} copos de água`;
 }
-console.log(hydrate('5 copos, 1 copos'));
 
 module.exports = {
   generatePhoneNumber,
