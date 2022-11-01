@@ -56,19 +56,22 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
+const analiseNumero = (numero) => {
+  if (numero % 15 === 0) {
+    return 'fizzBuzz';
+  } if (numero % 3 === 0) {
+    return 'fizz';
+  } if (numero % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+};
+
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
   const arrayDeStrings = [];
-  for (const numero in arrayNumeros) {
-    if (arrayNumeros[numero] % 15 === 0) {
-      arrayDeStrings.push('fizzBuzz');
-    } else if (arrayNumeros[numero] % 3 === 0) {
-      arrayDeStrings.push('fizz');
-    } else if (arrayNumeros[numero] % 5 === 0) {
-      arrayDeStrings.push('buzz');
-    } else {
-      arrayDeStrings.push('bug!');
-    }
+  for (let index = 0; index < arrayNumeros.length; index += 1) {
+    arrayDeStrings.push(analiseNumero(arrayNumeros[index]));
   }
   return arrayDeStrings;
 }

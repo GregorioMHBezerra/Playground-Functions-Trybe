@@ -1,5 +1,6 @@
 // Desafio 11
-function generatePhoneNumber(arrayDeNumeros) {
+
+const validadorCel = (arrayDeNumeros) => {
   if (arrayDeNumeros.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
@@ -8,18 +9,34 @@ function generatePhoneNumber(arrayDeNumeros) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
+  return arrayDeNumeros;
+};
+
+const validadorCelRepeticao = (arrayDeNumeros) => {
+  let arrayDeNumerosValidado = validadorCel(arrayDeNumeros);
+  if (typeof arrayDeNumerosValidado === 'string') {
+    return arrayDeNumerosValidado;
+  }
+  for (let index = 0; index < arrayDeNumerosValidado.length; index += 1) {
     let contador = 0;
-    for (let index2 = 0; index2 < arrayDeNumeros.length; index2 += 1) {
-      if (arrayDeNumeros[index] === arrayDeNumeros[index2]) {
+    for (let index2 = 0; index2 < arrayDeNumerosValidado.length; index2 += 1) {
+      if (arrayDeNumerosValidado[index] === arrayDeNumerosValidado[index2]) {
         contador += 1;
       }
-      if (contador === 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
+    }
+    if (contador === 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  return `(${arrayDeNumeros[0]}${arrayDeNumeros[1]}) ${arrayDeNumeros[2]}${arrayDeNumeros[3]}${arrayDeNumeros[4]}${arrayDeNumeros[5]}${arrayDeNumeros[6]}-${arrayDeNumeros[7]}${arrayDeNumeros[8]}${arrayDeNumeros[9]}${arrayDeNumeros[10]}`;
+  return arrayDeNumeros;
+};
+
+function generatePhoneNumber(arrayDeNumeros) {
+  let arrayDeNumerosValidado = validadorCelRepeticao(arrayDeNumeros);
+  if (typeof arrayDeNumerosValidado === 'string') {
+    return arrayDeNumerosValidado;
+  }
+  return `(${arrayDeNumerosValidado[0]}${arrayDeNumerosValidado[1]}) ${arrayDeNumerosValidado[2]}${arrayDeNumerosValidado[3]}${arrayDeNumerosValidado[4]}${arrayDeNumerosValidado[5]}${arrayDeNumerosValidado[6]}-${arrayDeNumerosValidado[7]}${arrayDeNumerosValidado[8]}${arrayDeNumerosValidado[9]}${arrayDeNumerosValidado[10]}`;
 }
 
 // Desafio 12
