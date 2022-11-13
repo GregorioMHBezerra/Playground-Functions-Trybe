@@ -1,6 +1,6 @@
 # Projeto Playground Functions
 
-![preview](./github/preview-html.png)
+![preview](./github/preview-js.png)
 
 > Módulo de Fundamentos
 
