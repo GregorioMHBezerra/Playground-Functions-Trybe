@@ -1,10 +1,20 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Projeto Playground Functions
+
+![preview](./github/preview-html.png)
+
+> Módulo de Fundamentos
+
+ Site desenvolvido como projeto da Trybe em 2022
+
+## Tecnologias
+
+- JavaScript
+- Git e Github
+
+## Contato
+https://www.linkedin.com/in/gregoriobezerra/
+
+gregoriodmhbezerra@gmail.com
+
+## Observações
+Apenas o conteúdo da pasta src e github foi de minha autoria, os demais arquivos são de autoria da Trybe.
