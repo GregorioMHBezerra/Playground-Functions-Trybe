@@ -1,4 +1,4 @@
-// Desafio 1   npm teste para todos e npm test compareTrue para apenas a função
+// Desafio 1  
 function compareTrue(booleano1, booleano2) {
   return (booleano1 && booleano2);
 }
